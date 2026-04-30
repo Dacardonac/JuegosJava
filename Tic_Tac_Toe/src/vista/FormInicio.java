@@ -4,6 +4,8 @@ package vista;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
+import modelo.Jugador;
+import modelo.TipoImagen;
 
 public class FormInicio extends javax.swing.JFrame {
 
@@ -34,10 +36,6 @@ public class FormInicio extends javax.swing.JFrame {
         txtJugador2 = new javax.swing.JTextField();
         panelBoton = new javax.swing.JPanel();
         lblIniciar = new javax.swing.JLabel();
-        imagen1 = new modelo.Imagen();
-        imagen2 = new modelo.Imagen();
-        imagen3 = new modelo.Imagen();
-        imagen4 = new modelo.Imagen();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -151,6 +149,9 @@ public class FormInicio extends javax.swing.JFrame {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblIniciarMouseExited(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblIniciarMousePressed(evt);
+            }
         });
 
         javax.swing.GroupLayout panelBotonLayout = new javax.swing.GroupLayout(panelBoton);
@@ -166,26 +167,6 @@ public class FormInicio extends javax.swing.JFrame {
 
         panelFondo.add(panelBoton);
         panelBoton.setBounds(130, 230, 160, 50);
-
-        imagen1.setText("imagen1");
-        imagen1.setRuta("/resources/Circulo.png");
-        panelFondo.add(imagen1);
-        imagen1.setBounds(340, 160, 40, 40);
-
-        imagen2.setText("imagen1");
-        imagen2.setRuta("/resources/JugadorEquis.png");
-        panelFondo.add(imagen2);
-        imagen2.setBounds(40, 100, 40, 40);
-
-        imagen3.setText("imagen1");
-        imagen3.setRuta("/resources/JugadorCirculo.png");
-        panelFondo.add(imagen3);
-        imagen3.setBounds(40, 160, 40, 40);
-
-        imagen4.setText("imagen1");
-        imagen4.setRuta("/resources/Equis.png");
-        panelFondo.add(imagen4);
-        imagen4.setBounds(340, 100, 40, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -293,12 +274,30 @@ public class FormInicio extends javax.swing.JFrame {
         panelBoton.setBackground(new Color(42, 22, 79));
     }//GEN-LAST:event_lblIniciarMouseExited
 
+    private void lblIniciarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarMousePressed
+       this.dispose();
+       
+       Jugador jugador1 = new Jugador(TipoImagen.EQUIS);
+       if(txtJugador1.getText().equals("")) {
+           jugador1.setNombre("JUGADOR 1");
+       }
+       else {
+           jugador1.setNombre(txtJugador1.getText());
+       }
+       
+       Jugador jugador2 = new Jugador(TipoImagen.CIRCULO);
+       if(txtJugador2.getText().equals("")) {
+           jugador2.setNombre("JUGADOR 2");
+       }
+       else {
+           jugador2.setNombre(txtJugador2.getText());
+       }
+       
+       FormTicTacToe ticTacToe = new FormTicTacToe(jugador1,jugador2);
+       ticTacToe.setVisible(true);
+    }//GEN-LAST:event_lblIniciarMousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private modelo.Imagen imagen1;
-    private modelo.Imagen imagen2;
-    private modelo.Imagen imagen3;
-    private modelo.Imagen imagen4;
     private javax.swing.JLabel lblCierre;
     private javax.swing.JLabel lblIniciar;
     private javax.swing.JPanel panelBoton;

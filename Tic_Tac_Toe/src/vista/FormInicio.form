@@ -198,54 +198,11 @@
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblIniciarMouseEntered"/>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblIniciarMouseExited"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblIniciarMousePressed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="modelo.Imagen" name="imagen1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="imagen1"/>
-            <Property name="ruta" type="java.lang.String" value="/resources/Circulo.png"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="340" y="160" width="40" height="40"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="modelo.Imagen" name="imagen2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="imagen1"/>
-            <Property name="ruta" type="java.lang.String" value="/resources/JugadorEquis.png"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="40" y="100" width="40" height="40"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="modelo.Imagen" name="imagen3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="imagen1"/>
-            <Property name="ruta" type="java.lang.String" value="/resources/JugadorCirculo.png"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="40" y="160" width="40" height="40"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="modelo.Imagen" name="imagen4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="imagen1"/>
-            <Property name="ruta" type="java.lang.String" value="/resources/Equis.png"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="340" y="100" width="40" height="40"/>
-            </Constraint>
-          </Constraints>
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
